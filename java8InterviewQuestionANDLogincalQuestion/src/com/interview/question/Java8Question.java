@@ -45,7 +45,8 @@ public class Java8Question {
 			
 			
 			System.out.println("=====");
-		//
+			//program to print number of active/Inactive Employee
+			
 			Map<String, Long> activeInactiveCount =	employeeList.stream()
 				.collect(Collectors.groupingBy(Employee::getActive, Collectors.counting()));
 			System.out.println(activeInactiveCount);
@@ -61,6 +62,7 @@ public class Java8Question {
 			
 			
 			System.out.println("=====");
+			//program to Employee sort by name
 			
 			Map<String, List<Employee>> sortByName = employeeList.stream()
 					.sorted(Comparator.comparing(Employee::getName).reversed())
